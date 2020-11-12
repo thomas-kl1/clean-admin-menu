@@ -42,10 +42,9 @@
         "issues": "https://github.com/redchamps/clean-admin-menu/issues/"
     },
     "require": {
-        "magento/framework": "*",
-        "magento/module-backend": "*",
-        "magento/module-config": "*",
-        "php": "^7.1.0"
+        "magento/framework": "^103.0",
+        "magento/module-backend": "^102.0",
+        "magento/module-config": "^101.0"
     },
     "repositories": [
         {
