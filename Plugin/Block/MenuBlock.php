@@ -23,12 +23,11 @@ final class MenuBlock
         ?array $colBrakes = null
     ): array {
         $firstItem = reset($menu);
-        $colBrakes = $colBrakes ?? [];
 
         if ($level === 1 && $firstItem && $firstItem->toArray()['toolTip'] === Config::MENU_ID) {
             $level = 0;
             $limit = self::MAX_ITEMS;
-            foreach ($colBrakes as $key => $colBrake) {
+            foreach ($colBrakes ?? [] as $key => $colBrake) {
                 if (isset($colBrake['colbrake'])) {
                     if ($colBrake['colbrake']) {
                         $colBrakes[$key]['colbrake'] = false;
