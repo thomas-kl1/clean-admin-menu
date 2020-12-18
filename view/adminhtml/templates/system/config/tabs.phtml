@@ -12,6 +12,9 @@ use Magento\Framework\Escaper;
 
 /** @var $block Tabs */
 /** @var $escaper Escaper */
+
+// ToDo: Used for backward compatibility with Magento < 2.4
+$escaper = $escaper ?? $block;
 ?>
 <?php if ($block->getTabs()) : ?>
     <div id="<?= $escaper->escapeHtmlAttr($block->getId()) ?>" class="config-nav">
